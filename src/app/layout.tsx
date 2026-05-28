@@ -12,16 +12,16 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 export const metadata: Metadata = {
   metadataBase: new URL("https://pixelfinds.vercel.app"),
   title: {
-    default: "PixelFinds | Premium Gadget Guides & Product Reviews",
+    default: "PixelFinds | Best Gadgets, Tech Accessories & Amazon Finds",
     template: "%s | PixelFinds",
   },
-  description: "Highly optimized, expert technical analysis, editorial clarity, and comprehensive hardware reviews. We help you make informed decisions for your setup.",
+  description: "Discover the best gadgets, productivity tools, study setup accessories, and trending Amazon finds with curated recommendations and detailed buying guides from PixelFinds.",
   alternates: {
     canonical: "./",
   },
   openGraph: {
-    title: "PixelFinds | Premium Gadget Guides & Product Reviews",
-    description: "Highly optimized, expert technical analysis, editorial clarity, and comprehensive hardware reviews.",
+    title: "PixelFinds | Best Gadgets, Tech Accessories & Amazon Finds",
+    description: "Discover the best gadgets, productivity tools, study setup accessories, and trending Amazon finds with curated recommendations and detailed buying guides from PixelFinds.",
     url: "https://pixelfinds.vercel.app",
     siteName: "PixelFinds",
     locale: "en_US",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PixelFinds | Premium Gadget Guides & Product Reviews",
-    description: "Highly optimized, expert technical analysis, editorial clarity, and comprehensive hardware reviews.",
+    title: "PixelFinds | Best Gadgets, Tech Accessories & Amazon Finds",
+    description: "Discover the best gadgets, productivity tools, study setup accessories, and trending Amazon finds with curated recommendations and detailed buying guides from PixelFinds.",
     images: [HOME_OG_IMAGE_URL],
   },
   robots: {
