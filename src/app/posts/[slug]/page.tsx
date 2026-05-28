@@ -40,12 +40,12 @@ export default async function Post(props: PostParams) {
       "name": "PixelFinds",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://pixelfinds.com/logo.webp"
+        "url": "https://pixelfinds.vercel.app/logo.webp"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://pixelfinds.com/posts/${post.slug}`
+      "@id": `https://pixelfinds.vercel.app/posts/${post.slug}`
     }
   };
 
@@ -271,7 +271,7 @@ export async function generateMetadata(props: PostParams): Promise<Metadata> {
     openGraph: {
       title,
       description: post.excerpt,
-      url: `https://pixelfinds.com/posts/${post.slug}`,
+      url: `https://pixelfinds.vercel.app/posts/${post.slug}`,
       type: "article",
       publishedTime: post.date,
       authors: [post.author.name],

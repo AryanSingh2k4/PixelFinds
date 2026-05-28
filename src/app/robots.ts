@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/_next/", "/static/"],
     },
-    sitemap: "https://pixelfinds.com/sitemap.xml",
+    sitemap: "https://pixelfinds.vercel.app/sitemap.xml",
   };
 }

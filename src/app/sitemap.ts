@@ -3,7 +3,7 @@ import { getAllPosts } from "@/lib/api";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
-  const baseUrl = "https://pixelfinds.com";
+  const baseUrl = "https://pixelfinds.vercel.app";
 
   // Base routes
   const routes = [

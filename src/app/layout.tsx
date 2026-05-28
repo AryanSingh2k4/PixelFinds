@@ -10,7 +10,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://pixelfinds.com"),
+  metadataBase: new URL("https://pixelfinds.vercel.app"),
   title: {
     default: "PixelFinds | Premium Gadget Guides & Product Reviews",
     template: "%s | PixelFinds",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "PixelFinds | Premium Gadget Guides & Product Reviews",
     description: "Highly optimized, expert technical analysis, editorial clarity, and comprehensive hardware reviews.",
-    url: "https://pixelfinds.com",
+    url: "https://pixelfinds.vercel.app",
     siteName: "PixelFinds",
     locale: "en_US",
     type: "website",
@@ -51,6 +51,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  verification: {
+    google: "bDf0ZCX2UcPHt41g9hjYxxO34VMPzKbep6fZmZUeEhU",
   },
 };
 

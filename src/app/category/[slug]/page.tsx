@@ -27,7 +27,7 @@ export async function generateMetadata(props: CategoryParams): Promise<Metadata>
     openGraph: {
       title: `${details.title} | PixelFinds`,
       description: details.desc,
-      url: `https://pixelfinds.com/category/${slug}`,
+      url: `https://pixelfinds.vercel.app/category/${slug}`,
       images: [{ url: details.image }],
     },
   };
