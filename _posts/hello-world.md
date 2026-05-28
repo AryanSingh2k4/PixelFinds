@@ -4,8 +4,8 @@ excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
 coverImage: "/assets/blog/hello-world/cover.webp"
 date: "2020-03-16T05:35:07.322Z"
 author:
-  name: Tim Neutkens
-  picture: "/assets/blog/authors/tim.webp"
+  name: "PixelFinds Editorial"
+  picture: "/assets/branding/logo.webp"
 ogImage:
   url: "/assets/blog/hello-world/cover.webp"
 ---

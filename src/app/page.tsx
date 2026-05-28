@@ -184,8 +184,8 @@ export default function Index() {
                 <div className="absolute inset-0 bg-black/45 flex flex-col justify-end p-stack-lg group-hover:bg-black/55 transition-all">
                   <h3 className="text-white font-headline text-2xl font-extrabold">Gadgets</h3>
                   <p className="text-white/85 text-sm">Latest hardware innovations and reviews.</p>
-                  <Link href="/category/gadgets" className="text-white font-headline text-xs font-bold underline mt-2 flex items-center gap-1">
-                    Explore reviews <span className="material-symbols-outlined text-[14px]">arrow_right_alt</span>
+                  <Link href="/category/gadgets" className="bg-[#3A57EA] text-white hover:bg-[#3A57EA]/90 active:scale-95 text-[11px] font-bold px-4 py-2.5 rounded-xl font-headline flex items-center gap-1.5 w-fit shadow-md mt-4 transition-all">
+                    Explore reviews <span className="material-symbols-outlined text-[15px]">arrow_right_alt</span>
                   </Link>
                 </div>
               </div>
@@ -198,7 +198,7 @@ export default function Index() {
                 />
                 <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 group-hover:bg-black/50 transition-all">
                   <h3 className="text-white font-headline text-lg font-bold">Study Setup</h3>
-                  <Link href="/category/study-setup" className="text-white text-xs font-semibold underline flex items-center gap-1">
+                  <Link href="/category/study-setup" className="bg-[#3A57EA] text-white hover:bg-[#3A57EA]/90 active:scale-95 text-[10px] font-bold px-3.5 py-1.5 rounded-lg font-headline flex items-center gap-1 w-fit shadow-md mt-2 transition-all">
                     View setup gear <span className="material-symbols-outlined text-[14px]">arrow_right_alt</span>
                   </Link>
                 </div>
@@ -212,7 +212,7 @@ export default function Index() {
                 />
                 <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 group-hover:bg-black/50 transition-all">
                   <h3 className="text-white font-headline text-[15px] font-bold">Productivity</h3>
-                  <Link href="/category/productivity" className="text-white text-[11px] font-semibold underline flex items-center gap-1">
+                  <Link href="/category/productivity" className="bg-[#3A57EA] text-white hover:bg-[#3A57EA]/90 active:scale-95 text-[10px] font-bold px-3 py-1.5 rounded-lg font-headline flex items-center gap-1 w-fit shadow-md mt-2 transition-all">
                     Go <span className="material-symbols-outlined text-[14px]">arrow_right_alt</span>
                   </Link>
                 </div>
@@ -226,7 +226,7 @@ export default function Index() {
                 />
                 <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 group-hover:bg-black/50 transition-all">
                   <h3 className="text-white font-headline text-[15px] font-bold">Accessories</h3>
-                  <Link href="/category/mobile-accessories" className="text-white text-[11px] font-semibold underline flex items-center gap-1">
+                  <Link href="/category/mobile-accessories" className="bg-[#3A57EA] text-white hover:bg-[#3A57EA]/90 active:scale-95 text-[10px] font-bold px-3 py-1.5 rounded-lg font-headline flex items-center gap-1 w-fit shadow-md mt-2 transition-all">
                     Go <span className="material-symbols-outlined text-[14px]">arrow_right_alt</span>
                   </Link>
                 </div>

@@ -4,8 +4,8 @@ excerpt: "We tested over 50 peripheral combinations to find the perfect ergonomi
 date: "2026-04-24T05:35:07.322Z"
 coverImage: "/assets/blog/mechanical-keyboard-hero.jpg"
 author:
-  name: "Marcus Sterling"
-  picture: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200"
+  name: "PixelFinds Editorial"
+  picture: "/assets/branding/logo.webp"
 ogImage:
   url: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&q=80&w=1200"
 category: "Gadgets"

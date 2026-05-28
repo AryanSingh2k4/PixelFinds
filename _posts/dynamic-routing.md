@@ -4,8 +4,8 @@ excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
 coverImage: "/assets/blog/dynamic-routing/cover.webp"
 date: "2020-03-16T05:35:07.322Z"
 author:
-  name: JJ Kasper
-  picture: "/assets/blog/authors/jj.webp"
+  name: "PixelFinds Editorial"
+  picture: "/assets/branding/logo.webp"
 ogImage:
   url: "/assets/blog/dynamic-routing/cover.webp"
 ---

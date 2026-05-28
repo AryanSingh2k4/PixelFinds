@@ -4,8 +4,8 @@ excerpt: "We spent 140 hours testing the most popular motorized standing desks t
 date: "2026-03-15T05:35:07.322Z"
 coverImage: "/assets/blog/standing-desk-hero.jpg"
 author:
-  name: "Marcus Sterling"
-  picture: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200"
+  name: "PixelFinds Editorial"
+  picture: "/assets/branding/logo.webp"
 ogImage:
   url: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=1200"
 category: "Study Setup"
