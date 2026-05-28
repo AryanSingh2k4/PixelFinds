@@ -2,6 +2,7 @@ import Footer from "@/app/_components/footer";
 import Header from "@/app/_components/header";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
 
@@ -108,6 +109,7 @@ export default function RootLayout({
         <Header />
         <div className="flex-1 w-full">{children}</div>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
