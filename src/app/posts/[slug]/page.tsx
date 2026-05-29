@@ -116,7 +116,7 @@ export default async function Post(props: PostParams) {
 
           {/* Quick Recommendations Summary Card */}
           {post.quickPicks && post.quickPicks.length > 0 && (
-            <div className="bg-surface-container-low border border-primary-fixed-dim/50 rounded-2xl p-6 mb-8 shadow-soft">
+            <div id="quick-picks" className="bg-surface-container-low border border-primary-fixed-dim/50 rounded-2xl p-6 mb-8 shadow-soft">
               <div className="flex items-center gap-2 mb-4 text-primary">
                 <span className="material-symbols-outlined font-bold text-2xl">bolt</span>
                 <h3 className="font-headline text-lg font-bold">Quick Recommendations</h3>
@@ -229,21 +229,68 @@ export default async function Post(props: PostParams) {
                 href={`#product-${idx + 1}`}
               >
                 <span className="material-symbols-outlined text-[16px] text-on-surface-variant/75">star</span>
-                <span className="text-xs font-headline truncate max-w-[200px]">{idx + 1}. {prod.title.split(" standing")[0].split(" Desk")[0]}</span>
+                <span className="text-xs font-headline truncate max-w-[200px]">{idx + 1}. {prod.title}</span>
               </a>
             ))}
           </nav>
-          <div className="mt-4 p-4 bg-primary-container text-on-primary-container rounded-xl">
-            <p className="font-headline font-bold text-xs uppercase tracking-wider mb-1 text-white/95">Deal of the Day</p>
-            <p className="text-lg mb-4 font-bold text-white leading-tight">Save up to 40% on Premium Standing Desks</p>
-            <a 
-              href={post.products?.[0]?.affiliateUrl || "#"} 
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-              className="w-full bg-white text-primary text-center block py-2.5 rounded-lg font-headline font-bold text-xs hover:shadow-md transition-all active:scale-98"
-            >
-              Check Deals
-            </a>
+          {/* Dynamic Sidebar Widgets */}
+          <div className="flex flex-col gap-4 mt-6">
+            {/* Quick Recommendations Widget */}
+            {post.quickPicks && post.quickPicks.length > 0 && (
+              <div className="p-5 bg-surface-container-low border border-outline-variant/30 rounded-2xl shadow-soft">
+                <h4 className="font-headline font-bold text-xs uppercase tracking-wider text-primary mb-3 flex items-center gap-1.5">
+                  <span className="material-symbols-outlined text-[18px] text-primary">workspace_premium</span> Quick Recommendations
+                </h4>
+                <div className="flex flex-col gap-2.5">
+                  {post.quickPicks.map((pick, idx) => (
+                    <a 
+                      key={idx}
+                      href={pick.url}
+                      className="flex flex-col p-2.5 rounded-xl bg-white hover:bg-surface-container border border-outline-variant/20 hover:border-primary/20 transition-all group"
+                    >
+                      <span className="text-[9px] font-headline font-bold text-primary uppercase tracking-wider mb-0.5">
+                        {pick.type}
+                      </span>
+                      <div className="flex items-center justify-between min-w-0 w-full">
+                        <span className="text-[11px] font-headline font-bold text-on-surface truncate group-hover:text-primary transition-colors">
+                          {pick.title}
+                        </span>
+                        <span className="material-symbols-outlined text-primary text-[14px] shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">arrow_right</span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Buying Checklist Widget */}
+            <div className="p-5 bg-surface-container-low border border-outline-variant/30 rounded-2xl shadow-soft">
+              <h4 className="font-headline font-bold text-xs uppercase tracking-wider text-primary mb-3 flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-[18px] text-primary">fact_check</span> Buying Checklist
+              </h4>
+              <ul className="flex flex-col gap-2">
+                <li className="flex items-center gap-2 text-[11px] font-sans text-on-surface-variant">
+                  <span className="material-symbols-outlined text-green-600 text-[16px] font-bold">check_circle</span>
+                  <span>Active Noise Cancellation (ANC)</span>
+                </li>
+                <li className="flex items-center gap-2 text-[11px] font-sans text-on-surface-variant">
+                  <span className="material-symbols-outlined text-green-600 text-[16px] font-bold">check_circle</span>
+                  <span>Battery Life & Charging Speed</span>
+                </li>
+                <li className="flex items-center gap-2 text-[11px] font-sans text-on-surface-variant">
+                  <span className="material-symbols-outlined text-green-600 text-[16px] font-bold">check_circle</span>
+                  <span>Low-Latency Gaming Mode</span>
+                </li>
+                <li className="flex items-center gap-2 text-[11px] font-sans text-on-surface-variant">
+                  <span className="material-symbols-outlined text-green-600 text-[16px] font-bold">check_circle</span>
+                  <span>Call Quality & Microphone Count</span>
+                </li>
+                <li className="flex items-center gap-2 text-[11px] font-sans text-on-surface-variant">
+                  <span className="material-symbols-outlined text-green-600 text-[16px] font-bold">check_circle</span>
+                  <span>Bluetooth Version & Codecs</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </aside>
 

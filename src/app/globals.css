@@ -27,3 +27,88 @@
 .shadow-soft {
   box-shadow: 0px 10px 25px -5px rgba(0,0,0,0.05);
 }
+
+/* Custom Premium Editorial Typography (.prose) */
+.prose h1 {
+  font-family: var(--font-headline), sans-serif;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0D0F1B;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+.prose h2 {
+  font-family: var(--font-headline), sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0D0F1B;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+  border-bottom: 1px solid rgba(203, 213, 225, 0.5);
+  padding-bottom: 0.5rem;
+}
+
+.prose h3 {
+  font-family: var(--font-headline), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #3A57EA; /* primary brand color highlights */
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.prose p {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #475569; /* slate-600 */
+  margin-bottom: 1.25rem;
+}
+
+.prose strong {
+  font-weight: 700;
+  color: #0D0F1B;
+}
+
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose li {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.prose blockquote {
+  border-left: 4px solid #3A57EA;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #475569;
+  margin: 1.5rem 0;
+  background: rgba(58, 87, 234, 0.03);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.prose hr {
+  border: 0;
+  border-top: 1px solid rgba(203, 213, 225, 0.6);
+  margin: 2.5rem 0;
+}
+

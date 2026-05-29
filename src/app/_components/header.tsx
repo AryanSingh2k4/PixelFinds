@@ -12,7 +12,7 @@ export function Header() {
     { name: "Desk Setup", href: "/category/desk-setup" },
     { name: "Productivity", href: "/category/productivity" },
     { name: "Buying Guides", href: "/category/buying-guides" },
-    { name: "Top Picks", href: "/category/top-picks" },
+    { name: "Quick Recommendations", href: "/category/quick-recommendations" },
   ];
 
   return (

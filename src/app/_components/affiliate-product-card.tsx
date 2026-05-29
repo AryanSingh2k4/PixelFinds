@@ -23,13 +23,13 @@ export default function AffiliateProductCard({ product, index }: AffiliateProduc
       )}
 
       {/* Image Container */}
-      <div className="md:w-1/3 relative min-h-[220px] bg-slate-50 flex items-center justify-center">
+      <div className="md:w-1/3 relative min-h-[240px] bg-[#F8FAFC] flex items-center justify-center p-6 border-r border-outline-variant/20">
         <img 
           src={product.image} 
           alt={product.title} 
-          className="w-full h-full object-cover max-h-[300px] md:max-h-full"
+          className="w-auto h-auto max-w-full max-h-[200px] md:max-h-[240px] object-contain mix-blend-multiply transition-transform duration-300 group-hover:scale-105"
         />
-        <div className="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-full font-headline font-bold text-sm shadow-md">
+        <div className="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-full font-headline font-bold text-xs shadow-md">
           {product.rating} / 10
         </div>
       </div>

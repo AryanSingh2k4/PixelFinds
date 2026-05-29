@@ -60,7 +60,7 @@ export function Footer() {
             <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/category/desk-setup">Desk Setup</a>
             <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/category/productivity">Productivity</a>
             <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/category/buying-guides">Buying Guides</a>
-            <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/category/top-picks">Top Picks</a>
+            <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/category/quick-recommendations">Quick Recommendations</a>
           </div>
         </div>
       </div>
