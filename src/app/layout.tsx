@@ -4,12 +4,13 @@ import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
-import { Inter } from "next/font/google";
+import { Inter, Geist } from "next/font/google";
 import cn from "classnames";
 
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const geist = Geist({ subsets: ["latin"], variable: "--font-headline" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://pixelfinds.vercel.app"),
@@ -99,13 +100,20 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#f8f9ff" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link 
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" 
           rel="stylesheet"
         />
       </head>
       <body
-        className={cn(inter.className, "bg-background text-on-surface min-h-screen flex flex-col")}
+        className={cn(
+          inter.variable,
+          geist.variable,
+          inter.className,
+          "bg-background text-on-surface min-h-screen flex flex-col"
+        )}
       >
         <Header />
         <div className="flex-1 w-full">{children}</div>
