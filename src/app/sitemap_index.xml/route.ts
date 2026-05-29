@@ -12,7 +12,7 @@ export async function GET() {
     "/category/desk-setup",
     "/category/productivity",
     "/category/buying-guides",
-    "/category/top-picks",
+    "/category/quick-recommendations",
     "/about",
     "/disclosure",
     "/privacy-policy",
