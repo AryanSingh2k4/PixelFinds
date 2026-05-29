@@ -49,17 +49,18 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
           <div className="flex flex-col gap-4">
             <h4 className="font-bold text-on-surface font-headline">Links</h4>
+            <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/about">About</a>
+            <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/disclosure">Disclosure</a>
             <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/privacy-policy">Privacy Policy</a>
-            <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/terms-of-service">Terms of Service</a>
-            <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/contact">Contact</a>
-            <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/sitemap.xml">Sitemap</a>
           </div>
           <div className="flex flex-col gap-4">
             <h4 className="font-bold text-on-surface font-headline">Categories</h4>
+            <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/category/phones">Phones</a>
             <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/category/gadgets">Gadgets</a>
-            <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/category/study-setup">Study Setup</a>
+            <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/category/desk-setup">Desk Setup</a>
             <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/category/productivity">Productivity</a>
-            <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/category/amazon-finds">Amazon Finds</a>
+            <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/category/buying-guides">Buying Guides</a>
+            <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/category/top-picks">Top Picks</a>
           </div>
         </div>
       </div>

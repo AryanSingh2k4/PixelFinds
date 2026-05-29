@@ -7,12 +7,12 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const categories = [
+    { name: "Phones", href: "/category/phones" },
     { name: "Gadgets", href: "/category/gadgets" },
-    { name: "Study Setup", href: "/category/study-setup" },
-    { name: "Productivity", href: "/category/productivity" },
-    { name: "Mobile Accessories", href: "/category/mobile-accessories" },
-    { name: "Amazon Finds", href: "/category/amazon-finds" },
     { name: "Desk Setup", href: "/category/desk-setup" },
+    { name: "Productivity", href: "/category/productivity" },
+    { name: "Buying Guides", href: "/category/buying-guides" },
+    { name: "Top Picks", href: "/category/top-picks" },
   ];
 
   return (
