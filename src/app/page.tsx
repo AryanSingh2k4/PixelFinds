@@ -6,42 +6,65 @@ export default function Index() {
   const allPosts = getAllPosts();
 
   // Find editor's choice post or fallback to first post
-  const editorChoice = allPosts.find(p => p.category === "Study Setup") || allPosts[0];
+  const editorChoice = allPosts.length > 0 ? (allPosts.find(p => p.category === "Study Setup") || allPosts[0]) : null;
 
   // Latest articles (excluding the main featured hero if possible, or listing all)
-  const latestArticles = allPosts.slice(0, 5);
+  const latestArticles = allPosts.length > 0 ? allPosts.slice(0, 5) : [];
 
   return (
     <main className="bg-background text-on-surface pb-16">
       {/* Hero Section */}
       <section className="max-w-container-max mx-auto px-gutter pt-8 pb-12">
-        <div className="relative w-full h-[420px] sm:h-[480px] lg:h-auto lg:aspect-[21/9] rounded-2xl overflow-hidden group shadow-md">
-          <img 
-            alt={editorChoice.title} 
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-            src={editorChoice.ogImage.url || editorChoice.coverImage} 
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6 md:p-12">
-            <div className="max-w-3xl">
-              <span className="bg-primary text-on-primary px-3 py-1 rounded-full font-headline text-[11px] font-bold tracking-wider inline-block mb-4 uppercase">
-                EDITOR'S CHOICE
+        {editorChoice ? (
+          <div className="relative w-full h-[420px] sm:h-[480px] lg:h-auto lg:aspect-[21/9] rounded-2xl overflow-hidden group shadow-md">
+            <img 
+              alt={editorChoice.title} 
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              src={editorChoice.ogImage.url || editorChoice.coverImage} 
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6 md:p-12">
+              <div className="max-w-3xl">
+                <span className="bg-[#3A57EA] text-white px-3 py-1 rounded-full font-headline text-[11px] font-bold tracking-wider inline-block mb-4 uppercase">
+                  EDITOR'S CHOICE
+                </span>
+                <h1 className="font-headline text-2xl md:text-[40px] font-extrabold text-white mb-4 leading-tight">
+                  {editorChoice.title}
+                </h1>
+                <p className="text-white/80 text-body-md md:text-body-lg mb-6 line-clamp-2">
+                  {editorChoice.excerpt}
+                </p>
+                <Link 
+                  href={`/posts/${editorChoice.slug}`} 
+                  className="bg-[#3A57EA] text-white px-6 py-3 rounded-xl font-headline font-bold text-sm flex items-center gap-2 hover:bg-[#3A57EA]/90 hover:shadow-xl transition-all w-fit"
+                >
+                  Read More 
+                  <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="relative w-full min-h-[380px] lg:aspect-[21/9] rounded-2xl overflow-hidden group shadow-md bg-surface-container-low flex items-center justify-center text-center p-6 md:p-12 border border-outline-variant/30">
+            <div className="max-w-2xl">
+              <span className="bg-[#3A57EA] text-white px-3.5 py-1.5 rounded-full font-headline text-[10px] font-bold tracking-wider inline-block mb-4 uppercase">
+                Welcome to PixelFinds
               </span>
-              <h1 className="font-headline text-2xl md:text-[40px] font-extrabold text-white mb-4 leading-tight">
-                {editorChoice.title}
+              <h1 className="font-headline text-3xl md:text-[44px] font-extrabold text-on-surface mb-4 leading-tight">
+                Your High-Performance Tech Review Companion
               </h1>
-              <p className="text-white/80 text-body-md md:text-body-lg mb-6 line-clamp-2">
-                {editorChoice.excerpt}
+              <p className="text-on-surface-variant text-sm md:text-base mb-6 max-w-xl mx-auto leading-relaxed">
+                Discover the best gadgets, productivity tools, study setup accessories, and trending Amazon finds with curated recommendations and detailed buying guides.
               </p>
               <Link 
-                href={`/posts/${editorChoice.slug}`} 
-                className="bg-primary text-on-primary px-6 py-3 rounded-xl font-headline font-bold text-sm flex items-center gap-2 hover:bg-primary-container hover:shadow-xl transition-all w-fit"
+                href="#categories" 
+                className="bg-[#3A57EA] text-white px-6 py-3 rounded-xl font-headline font-bold text-sm flex items-center gap-2 hover:bg-[#3A57EA]/90 hover:shadow-xl transition-all mx-auto w-fit"
               >
-                Read More 
-                <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                Explore Categories
+                <span className="material-symbols-outlined text-[18px]">arrow_downward</span>
               </Link>
             </div>
           </div>
-        </div>
+        )}
       </section>
 
       {/* Main Grid Content */}
@@ -238,41 +261,49 @@ export default function Index() {
           <section id="latest">
             <h2 className="font-headline text-3xl font-extrabold text-on-background mb-stack-lg">Latest Reviews</h2>
             <div className="space-y-stack-lg">
-              {latestArticles.map((post) => (
-                <article key={post.slug} className="flex flex-col md:flex-row gap-6 group cursor-pointer border-b border-outline-variant/20 pb-stack-lg">
-                  <div className="w-full md:w-64 h-44 rounded-xl overflow-hidden shrink-0 shadow-soft bg-surface-dim relative">
-                    <img 
-                      alt={post.title} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                      src={post.coverImage} 
-                    />
-                  </div>
-                  <div className="flex flex-col justify-center flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="bg-primary/10 text-primary px-2.5 py-0.5 rounded font-headline font-bold text-[10px] uppercase tracking-wider">
-                        {post.category || "TECH"}
-                      </span>
-                      <span className="text-on-surface-variant text-[11px] font-sans">
-                        {new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })} • {post.readingTime || "5 min read"}
-                      </span>
-                    </div>
-                    <Link href={`/posts/${post.slug}`} className="font-headline text-xl font-bold mb-2 group-hover:text-primary transition-colors leading-tight">
-                      {post.title}
-                    </Link>
-                    <p className="text-on-surface-variant text-sm line-clamp-2 mb-3">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center gap-2">
+              {latestArticles.length > 0 ? (
+                latestArticles.map((post) => (
+                  <article key={post.slug} className="flex flex-col md:flex-row gap-6 group cursor-pointer border-b border-outline-variant/20 pb-stack-lg">
+                    <div className="w-full md:w-64 h-44 rounded-xl overflow-hidden shrink-0 shadow-soft bg-surface-dim relative">
                       <img 
-                        src={post.author.picture} 
-                        alt={post.author.name} 
-                        className="w-6 h-6 rounded-full object-cover" 
+                        alt={post.title} 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                        src={post.coverImage} 
                       />
-                      <span className="text-[12px] font-headline font-semibold text-on-surface">By {post.author.name}</span>
                     </div>
-                  </div>
-                </article>
-              ))}
+                    <div className="flex flex-col justify-center flex-1">
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className="bg-primary/10 text-primary px-2.5 py-0.5 rounded font-headline font-bold text-[10px] uppercase tracking-wider">
+                          {post.category || "TECH"}
+                        </span>
+                        <span className="text-on-surface-variant text-[11px] font-sans">
+                          {new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })} • {post.readingTime || "5 min read"}
+                        </span>
+                      </div>
+                      <Link href={`/posts/${post.slug}`} className="font-headline text-xl font-bold mb-2 group-hover:text-primary transition-colors leading-tight">
+                        {post.title}
+                      </Link>
+                      <p className="text-on-surface-variant text-sm line-clamp-2 mb-3">
+                        {post.excerpt}
+                      </p>
+                      <div className="flex items-center gap-2">
+                        <img 
+                          src={post.author.picture} 
+                          alt={post.author.name} 
+                          className="w-6 h-6 rounded-full object-cover" 
+                        />
+                        <span className="text-[12px] font-headline font-semibold text-on-surface">By {post.author.name}</span>
+                      </div>
+                    </div>
+                  </article>
+                ))
+              ) : (
+                <div className="p-8 text-center bg-surface-container-low rounded-2xl border border-outline-variant/30 max-w-lg mx-auto">
+                  <span className="material-symbols-outlined text-primary text-4xl mb-2">reviews</span>
+                  <h3 className="font-headline text-lg font-bold text-on-surface">Reviews Coming Soon</h3>
+                  <p className="text-on-surface-variant text-sm mt-1">We are currently preparing high-performance gadget reviews and curated tech setups. Stay tuned!</p>
+                </div>
+              )}
             </div>
           </section>
         </div>
