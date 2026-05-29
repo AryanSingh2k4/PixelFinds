@@ -89,15 +89,62 @@ Amazon offers three distinct subscription plans in India to accommodate differen
 
 Here is a head-to-head breakdown of what each subscription tier includes:
 
-| Feature | Standard Prime (₹1,499/yr) | Prime Lite (₹799/yr) | Shopping Edition (₹399/yr) |
-| --- | --- | --- | --- |
-| **Free Fast Delivery** | Yes (Same-day & One-day) | Yes (Same-day & One-day) | Yes (Same-day & One-day) |
-| **Prime Video Access** | Unlimited (4K UHD, Ad-free) | Mobile Only (720p HD, with Ads) | None |
-| **Concurrent Streams** | 4 Screens | 1 Mobile Screen | None |
-| **Prime Music** | Yes (100M+ songs, Ad-free) | None | None |
-| **Prime Reading** | Yes (Kindle Catalog) | None | None |
-| **Prime Gaming** | Yes (In-game loot & rewards) | None | None |
-| **Early Sale Access** | Yes (30 minutes early) | Yes (30 minutes early) | Yes (30 minutes early) |
+<div className="overflow-x-auto my-6 border border-outline-variant/30 rounded-xl">
+  <table className="w-full text-left border-collapse min-w-[500px]">
+    <thead>
+      <tr className="bg-surface-container-low border-b border-outline-variant/30">
+        <th className="p-3.5 font-headline text-xs font-bold text-on-surface-variant">Feature</th>
+        <th className="p-3.5 font-headline text-xs font-bold text-on-surface-variant">Standard Prime (₹1,499/yr)</th>
+        <th className="p-3.5 font-headline text-xs font-bold text-on-surface-variant">Prime Lite (₹799/yr)</th>
+        <th className="p-3.5 font-headline text-xs font-bold text-on-surface-variant">Shopping Edition (₹399/yr)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr className="border-b border-outline-variant/10 hover:bg-surface-container-lowest transition-colors">
+        <td className="p-3.5 text-sm font-headline font-bold text-on-surface">Free Fast Delivery</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Yes (Same-day & One-day)</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Yes (Same-day & One-day)</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Yes (Same-day & One-day)</td>
+      </tr>
+      <tr className="border-b border-outline-variant/10 hover:bg-surface-container-lowest transition-colors">
+        <td className="p-3.5 text-sm font-headline font-bold text-on-surface">Prime Video Access</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Unlimited (4K UHD, Ad-free)</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Mobile Only (720p HD, with Ads)</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">None</td>
+      </tr>
+      <tr className="border-b border-outline-variant/10 hover:bg-surface-container-lowest transition-colors">
+        <td className="p-3.5 text-sm font-headline font-bold text-on-surface">Concurrent Streams</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">4 Screens</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">1 Mobile Screen</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">None</td>
+      </tr>
+      <tr className="border-b border-outline-variant/10 hover:bg-surface-container-lowest transition-colors">
+        <td className="p-3.5 text-sm font-headline font-bold text-on-surface">Prime Music</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Yes (100M+ songs, Ad-free)</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">None</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">None</td>
+      </tr>
+      <tr className="border-b border-outline-variant/10 hover:bg-surface-container-lowest transition-colors">
+        <td className="p-3.5 text-sm font-headline font-bold text-on-surface">Prime Reading</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Yes (Kindle Catalog)</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">None</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">None</td>
+      </tr>
+      <tr className="border-b border-outline-variant/10 hover:bg-surface-container-lowest transition-colors">
+        <td className="p-3.5 text-sm font-headline font-bold text-on-surface">Prime Gaming</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Yes (In-game loot & rewards)</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">None</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">None</td>
+      </tr>
+      <tr className="hover:bg-surface-container-lowest transition-colors">
+        <td className="p-3.5 text-sm font-headline font-bold text-on-surface">Early Sale Access</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Yes (30 minutes early)</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Yes (30 minutes early)</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Yes (30 minutes early)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ---
 

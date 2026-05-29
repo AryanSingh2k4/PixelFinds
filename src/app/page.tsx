@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function Index() {
   const allPosts = getAllPosts();
 
-  // Find editor's choice post or fallback to first post
-  const editorChoice = allPosts.length > 0 ? (allPosts.find(p => p.category === "Study Setup") || allPosts[0]) : null;
+  // Find editor's choice post (specifically target earbuds review)
+  const editorChoice = allPosts.length > 0 ? (allPosts.find(p => p.slug === "best-wireless-earbuds-under-2500") || allPosts[0]) : null;
 
   // Latest articles (excluding the main featured hero if possible, or listing all)
   const latestArticles = allPosts.length > 0 ? allPosts.slice(0, 5) : [];
@@ -111,86 +111,30 @@ export default function Index() {
               </h2>
             </div>
             <div className="flex gap-6 overflow-x-auto pb-6 hide-scrollbar">
-              {/* Card 1 */}
-              <div className="flex-none w-72 bg-white rounded-2xl overflow-hidden shadow-soft border border-outline-variant/40 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
-                <div className="h-44 relative bg-slate-100">
-                  <img 
-                    alt="iPad Pro" 
-                    className="w-full h-full object-cover" 
-                    src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&q=80&w=350" 
-                  />
-                  <span className="absolute top-3 right-3 bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider">
-                    SALE
-                  </span>
-                </div>
-                <div className="p-stack-md flex flex-col justify-between h-44">
-                  <div>
-                    <p className="text-secondary font-headline font-bold text-[11px] uppercase tracking-wider mb-1">TABLETS</p>
-                    <h3 className="font-headline font-bold text-[17px] text-on-surface mb-2 leading-tight line-clamp-2">
-                      iPad Pro M4: The Laptop Replacement?
-                    </h3>
+              {allPosts.map((post) => (
+                <div key={post.slug} className="flex-none w-72 bg-white rounded-2xl overflow-hidden shadow-soft border border-outline-variant/40 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                  <div className="h-44 relative bg-slate-100">
+                    <img 
+                      alt={post.title} 
+                      className="w-full h-full object-cover" 
+                      src={post.coverImage} 
+                    />
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-headline text-[13px] font-bold text-secondary bg-secondary/10 px-2.5 py-1 rounded">Check Amazon</span>
-                    <Link href="/posts/the-ultimate-mechanical-keyboard-guide-for-2024" className="text-primary font-headline font-bold text-xs flex items-center gap-1">
-                      View <span className="material-symbols-outlined text-[14px]">open_in_new</span>
-                    </Link>
+                  <div className="p-stack-md flex flex-col justify-between h-44">
+                    <div>
+                      <p className="text-secondary font-headline font-bold text-[11px] uppercase tracking-wider mb-1">{post.category || "TECH"}</p>
+                      <h3 className="font-headline font-bold text-[17px] text-on-surface mb-2 leading-tight line-clamp-2">
+                        {post.title}
+                      </h3>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <Link href={`/posts/${post.slug}`} className="text-primary font-headline font-bold text-xs flex items-center gap-1 hover:underline">
+                        Read Review <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Card 2 */}
-              <div className="flex-none w-72 bg-white rounded-2xl overflow-hidden shadow-soft border border-outline-variant/40 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
-                <div className="h-44 relative bg-slate-100">
-                  <img 
-                    alt="Headphones" 
-                    className="w-full h-full object-cover" 
-                    src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=350" 
-                  />
-                </div>
-                <div className="p-stack-md flex flex-col justify-between h-44">
-                  <div>
-                    <p className="text-secondary font-headline font-bold text-[11px] uppercase tracking-wider mb-1">AUDIO</p>
-                    <h3 className="font-headline font-bold text-[17px] text-on-surface mb-2 leading-tight line-clamp-2">
-                      Sony WH-1000XM5 Deep Dive Review
-                    </h3>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-headline text-[13px] font-bold text-secondary bg-secondary/10 px-2.5 py-1 rounded">Check Amazon</span>
-                    <Link href="/posts/the-ultimate-mechanical-keyboard-guide-for-2024" className="text-primary font-headline font-bold text-xs flex items-center gap-1">
-                      View <span className="material-symbols-outlined text-[14px]">open_in_new</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 3 */}
-              <div className="flex-none w-72 bg-white rounded-2xl overflow-hidden shadow-soft border border-outline-variant/40 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
-                <div className="h-44 relative bg-slate-100">
-                  <img 
-                    alt="Keyboard" 
-                    className="w-full h-full object-cover" 
-                    src="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&q=80&w=350" 
-                  />
-                  <span className="absolute top-3 right-3 bg-tertiary text-on-tertiary px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider">
-                    HOT
-                  </span>
-                </div>
-                <div className="p-stack-md flex flex-col justify-between h-44">
-                  <div>
-                    <p className="text-secondary font-headline font-bold text-[11px] uppercase tracking-wider mb-1">GIZMOS</p>
-                    <h3 className="font-headline font-bold text-[17px] text-on-surface mb-2 leading-tight line-clamp-2">
-                      Best Keyboards for Creators & Programmers
-                    </h3>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-headline text-[13px] font-bold text-secondary bg-secondary/10 px-2.5 py-1 rounded">Check Amazon</span>
-                    <Link href="/posts/the-ultimate-mechanical-keyboard-guide-for-2024" className="text-primary font-headline font-bold text-xs flex items-center gap-1">
-                      View <span className="material-symbols-outlined text-[14px]">open_in_new</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </section>
 

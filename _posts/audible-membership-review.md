@@ -80,14 +80,56 @@ The core membership model operates on a hybrid subscription-and-credit architect
 
 To see how Audible stacks up against traditional formats, here is a head-to-head comparison of features:
 
-| Feature | Audible Audiobook | Physical Books | Kindle eBooks |
-| --- | --- | --- | --- |
-| **Portability** | High (Smartphone/Watch) | Low | High (Dedicated E-Reader) |
-| **Multitasking Potential** | High (Hands-Free Audio) | None (Requires Visual Focus) | None (Requires Visual Focus) |
-| **Offline Playback** | Yes (Fully Downloadable) | Yes | Yes (Fully Downloadable) |
-| **Cross-Device Syncing** | WhisperSync (Automated) | Manual Bookmark | Whispersync (Automated) |
-| **Storage foot-print** | Digital cloud/local storage | Physical shelf space | Digital local storage |
-| **Interactive tools** | Speed control, sleep timers | Highlighting | Notes, highlighting, dictionaries |
+<div className="overflow-x-auto my-6 border border-outline-variant/30 rounded-xl">
+  <table className="w-full text-left border-collapse min-w-[500px]">
+    <thead>
+      <tr className="bg-surface-container-low border-b border-outline-variant/30">
+        <th className="p-3.5 font-headline text-xs font-bold text-on-surface-variant">Feature</th>
+        <th className="p-3.5 font-headline text-xs font-bold text-on-surface-variant">Audible Audiobook</th>
+        <th className="p-3.5 font-headline text-xs font-bold text-on-surface-variant">Physical Books</th>
+        <th className="p-3.5 font-headline text-xs font-bold text-on-surface-variant">Kindle eBooks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr className="border-b border-outline-variant/10 hover:bg-surface-container-lowest transition-colors">
+        <td className="p-3.5 text-sm font-headline font-bold text-on-surface">Portability</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">High (Smartphone/Watch)</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Low</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">High (Dedicated E-Reader)</td>
+      </tr>
+      <tr className="border-b border-outline-variant/10 hover:bg-surface-container-lowest transition-colors">
+        <td className="p-3.5 text-sm font-headline font-bold text-on-surface">Multitasking Potential</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">High (Hands-Free Audio)</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">None (Requires Visual Focus)</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">None (Requires Visual Focus)</td>
+      </tr>
+      <tr className="border-b border-outline-variant/10 hover:bg-surface-container-lowest transition-colors">
+        <td className="p-3.5 text-sm font-headline font-bold text-on-surface">Offline Playback</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Yes (Fully Downloadable)</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Yes</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Yes (Fully Downloadable)</td>
+      </tr>
+      <tr className="border-b border-outline-variant/10 hover:bg-surface-container-lowest transition-colors">
+        <td className="p-3.5 text-sm font-headline font-bold text-on-surface">Cross-Device Syncing</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">WhisperSync (Automated)</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Manual Bookmark</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Whispersync (Automated)</td>
+      </tr>
+      <tr className="border-b border-outline-variant/10 hover:bg-surface-container-lowest transition-colors">
+        <td className="p-3.5 text-sm font-headline font-bold text-on-surface">Storage foot-print</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Digital cloud/local storage</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Physical shelf space</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Digital local storage</td>
+      </tr>
+      <tr className="hover:bg-surface-container-lowest transition-colors">
+        <td className="p-3.5 text-sm font-headline font-bold text-on-surface">Interactive tools</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Speed control, sleep timers</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Highlighting</td>
+        <td className="p-3.5 text-sm text-on-surface-variant">Notes, highlighting, dictionaries</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ---
 
