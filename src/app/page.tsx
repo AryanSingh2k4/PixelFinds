@@ -128,7 +128,7 @@ export default function Index() {
                       </h3>
                     </div>
                     <div className="flex items-center justify-between">
-                      <Link href={`/posts/${post.slug}`} className="text-primary font-headline font-bold text-xs flex items-center gap-1 hover:underline">
+                      <Link href={`/posts/${post.slug}`} className="bg-primary text-on-primary font-headline font-bold text-xs flex items-center gap-1.5 px-4 py-2 rounded-lg hover:bg-primary/90 active:scale-95 transition-all">
                         Read Review <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
                       </Link>
                     </div>

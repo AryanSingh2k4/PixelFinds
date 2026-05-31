@@ -70,12 +70,6 @@ export function Footer() {
           <p className="text-[12px] text-on-surface-variant font-sans">
             © {currentYear} PixelFinds. As an Amazon Associate I earn from qualifying purchases.
           </p>
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-green-500"></span>
-            <p className="text-[12px] text-on-surface-variant font-bold font-headline uppercase">
-              SERVER STATUS: OPTIMIZED
-            </p>
-          </div>
         </div>
       </div>
     </footer>

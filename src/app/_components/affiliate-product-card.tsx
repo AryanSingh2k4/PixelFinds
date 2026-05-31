@@ -92,10 +92,12 @@ export default function AffiliateProductCard({ product, index }: AffiliateProduc
             href={product.affiliateUrl} 
             target="_blank" 
             rel="nofollow noopener noreferrer"
-            className="bg-primary text-on-primary px-6 py-3 rounded-lg font-headline font-bold text-sm flex items-center justify-center gap-2 hover:bg-primary-container hover:shadow-lg active:scale-95 transition-all w-full sm:w-auto"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-headline font-extrabold text-sm text-white bg-gradient-to-r from-[#FF9900] to-[#FF7A00] hover:from-[#FFAB24] hover:to-[#FF8F24] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 w-full sm:w-auto shadow-md hover:shadow-lg"
+            style={{ animation: 'pulse-glow-orange 2s infinite ease-in-out' }}
           >
-            Check Price on Amazon
-            <span className="material-symbols-outlined text-[18px]">open_in_new</span>
+            <span className="material-symbols-outlined text-[20px] font-bold text-white">shopping_cart</span>
+            <span className="text-white">Check Live Price on Amazon</span>
+            <span className="material-symbols-outlined text-[18px] text-white">open_in_new</span>
           </a>
         </div>
         <div className="mt-3 text-center sm:text-left">

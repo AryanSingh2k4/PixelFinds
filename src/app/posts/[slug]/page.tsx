@@ -23,35 +23,93 @@ export default async function Post(props: PostParams) {
 
   const htmlContent = await markdownToHtml(post.content || "");
 
-  // Create JSON-LD Product/Article Schema for Advanced SEO
-  const jsonLd = {
+  const baseUrl = "https://pixelfinds.vercel.app";
+
+  // Article schema
+  const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": post.title,
+    "description": post.excerpt,
     "image": post.ogImage?.url || post.coverImage,
     "datePublished": post.date,
+    "dateModified": post.date,
     "author": {
       "@type": "Person",
-      "name": post.author.name
+      "name": post.author.name,
+      "url": baseUrl,
     },
-    "description": post.excerpt,
     "publisher": {
       "@type": "Organization",
       "name": "PixelFinds",
+      "url": baseUrl,
       "logo": {
         "@type": "ImageObject",
-        "url": "https://pixelfinds.vercel.app/logo.webp"
-      }
+        "url": `${baseUrl}/assets/branding/logo.webp`,
+        "width": 200,
+        "height": 60,
+      },
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://pixelfinds.vercel.app/posts/${post.slug}`
-    }
+      "@id": `${baseUrl}/posts/${post.slug}`,
+    },
+    "url": `${baseUrl}/posts/${post.slug}`,
+    "inLanguage": "en-IN",
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": baseUrl,
+      "name": "PixelFinds",
+    },
   };
+
+  // Breadcrumb schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": baseUrl,
+      },
+      ...(post.category ? [{
+        "@type": "ListItem",
+        "position": 2,
+        "name": post.category,
+        "item": `${baseUrl}/category/${post.category.toLowerCase().replace(/ /g, "-")}`,
+      }] : []),
+      {
+        "@type": "ListItem",
+        "position": post.category ? 3 : 2,
+        "name": post.title,
+        "item": `${baseUrl}/posts/${post.slug}`,
+      },
+    ],
+  };
+
+  // FAQ schema (if post has FAQs)
+  const faqSchema = post.faqs && post.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": post.faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer,
+      },
+    })),
+  } : null;
+
+  // Combined JSON-LD array
+  const jsonLd = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])];
+
 
   return (
     <main className="max-w-container-max mx-auto px-gutter py-stack-lg bg-background text-on-surface">
-      {/* Schema Injection */}
+      {/* Schema Injection — Article + Breadcrumb + FAQ */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -127,11 +185,11 @@ export default async function Post(props: PostParams) {
                     <p className="text-[10px] font-headline font-bold text-primary uppercase tracking-wider">{pick.type}</p>
                     <p className="font-headline font-bold text-sm text-on-surface my-2">{pick.title}</p>
                     <a 
-                      className="text-primary font-headline font-bold text-xs flex items-center hover:underline hover:gap-1.5 transition-all w-fit" 
+                      className="bg-primary text-on-primary font-headline font-extrabold text-[11px] flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg hover:bg-primary-container hover:shadow transition-all w-full text-center mt-3 active:scale-95" 
                       href={pick.url}
                     >
-                      View Details 
-                      <span className="material-symbols-outlined text-[16px]">arrow_right</span>
+                      View on Amazon
+                      <span className="material-symbols-outlined text-[14px]">open_in_new</span>
                     </a>
                   </div>
                 ))}
