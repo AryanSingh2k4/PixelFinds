@@ -1,7 +1,7 @@
 ---
 title: "Amazon Prime Membership Review (2026): Is Prime Worth It in India?"
 excerpt: "Thinking about an Amazon Prime subscription in 2026? Read our complete, data-backed Prime review comparing delivery speed, streaming value, Lite edition, and prices."
-date: "2026-05-29T13:00:00.000Z"
+date: "2026-05-31T13:00:00.000Z"
 coverImage: "/assets/blog/amazon-prime-membership-review.webp"
 ogImage:
   url: "/assets/blog/amazon-prime-membership-review.webp"
