@@ -162,11 +162,25 @@ The mobile playback UI is exceptionally polished, offering granular speed contro
 * **Active Listening Commitment**: To fully maximize the ₹199 monthly cost, you must commit to listening consistently; otherwise, unused credits can stack up.
 
 
-> [!TIP]
-> **Related Shopping, Business & Gear Guides:**
-> * Running a startup or freelancing agency? Save thousands on your tech hardware with our complete [Amazon Business Account Registration Guide (2026)](/posts/amazon-business-account-registration-india).
-> * To get the best out of Audible, you'll need the right gear. Read our data-backed comparison of the [Best Wireless Earbuds Under ₹2500 (2026)](/posts/best-wireless-earbuds-under-2500) to find the perfect budget TWS companion.
-> * Audible is part of the massive Amazon ecosystem. Check out our comprehensive [Amazon Prime Membership Review (2026)](/posts/amazon-prime-membership-review) to see if you should bundle your accounts.
+<div class="glass-card border-l-4 border-primary p-6 my-8 rounded-r-2xl bg-surface-container/20 shadow-soft">
+  <div class="flex items-center gap-2 mb-3 text-primary font-headline font-bold text-sm uppercase tracking-wider">
+    <span class="material-symbols-outlined text-[18px]">info</span> Related Shopping, Business & Gear Reviews
+  </div>
+  <ul class="space-y-3 pl-0 list-none my-0" style="list-style-type: none; padding-left: 0;">
+    <li class="flex items-start gap-2.5 text-sm text-on-surface-variant font-sans" style="margin-bottom: 0;">
+      <span class="material-symbols-outlined text-primary text-[16px] mt-0.5">arrow_right</span>
+      <span>Running a startup or freelancing agency? Save thousands on your tech hardware with our complete <a href="/posts/amazon-business-account-registration-india" class="text-primary hover:underline font-bold">Amazon Business Account Registration Guide (2026)</a>.</span>
+    </li>
+    <li class="flex items-start gap-2.5 text-sm text-on-surface-variant font-sans" style="margin-bottom: 0;">
+      <span class="material-symbols-outlined text-primary text-[16px] mt-0.5">arrow_right</span>
+      <span>To get the best out of Audible, you'll need the right gear. Read our data-backed comparison of the <a href="/posts/best-wireless-earbuds-under-2500" class="text-primary hover:underline font-bold">Best Wireless Earbuds Under ₹2500 (2026)</a> to find the perfect TWS companion.</span>
+    </li>
+    <li class="flex items-start gap-2.5 text-sm text-on-surface-variant font-sans" style="margin-bottom: 0;">
+      <span class="material-symbols-outlined text-primary text-[16px] mt-0.5">arrow_right</span>
+      <span>Audible is part of the massive Amazon ecosystem. Check out our comprehensive <a href="/posts/amazon-prime-membership-review" class="text-primary hover:underline font-bold">Amazon Prime Membership Review (2026)</a>.</span>
+    </li>
+  </ul>
+</div>
 
 ---
 

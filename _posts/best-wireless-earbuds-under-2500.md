@@ -150,11 +150,25 @@ IP54 or higher protection is recommended for workouts, runs, and outdoor usage t
 
 Bluetooth 5.4 provides improved stability, lower power consumption, and better dual-device connectivity.
 
-> [!TIP]
-> **Related Business, Setup & Service Guides:**
-> * Purchasing gear for a team or business? Claim up to 28% GST tax credits using our [Amazon Business Account Registration Guide (2026)](/posts/amazon-business-account-registration-india).
-> * Want to order these earbuds with fast, free delivery? Read our comprehensive [Amazon Prime Membership Review (2026)](/posts/amazon-prime-membership-review) to see if a Prime subscription is worth it in India.
-> * Looking for the perfect companion to test your new earbuds? Check out our [Audible Membership Review (2026)](/posts/audible-membership-review) to see how you can get free audiobooks on the go.
+<div class="glass-card border-l-4 border-primary p-6 my-8 rounded-r-2xl bg-surface-container/20 shadow-soft">
+  <div class="flex items-center gap-2 mb-3 text-primary font-headline font-bold text-sm uppercase tracking-wider">
+    <span class="material-symbols-outlined text-[18px]">info</span> Related Business, Setup & Service Reviews
+  </div>
+  <ul class="space-y-3 pl-0 list-none my-0" style="list-style-type: none; padding-left: 0;">
+    <li class="flex items-start gap-2.5 text-sm text-on-surface-variant font-sans" style="margin-bottom: 0;">
+      <span class="material-symbols-outlined text-primary text-[16px] mt-0.5">arrow_right</span>
+      <span>Purchasing gear for a team or business? Claim up to 28% GST tax credits using our <a href="/posts/amazon-business-account-registration-india" class="text-primary hover:underline font-bold">Amazon Business Account Registration Guide (2026)</a>.</span>
+    </li>
+    <li class="flex items-start gap-2.5 text-sm text-on-surface-variant font-sans" style="margin-bottom: 0;">
+      <span class="material-symbols-outlined text-primary text-[16px] mt-0.5">arrow_right</span>
+      <span>Want to order these earbuds with fast, free delivery? Read our comprehensive <a href="/posts/amazon-prime-membership-review" class="text-primary hover:underline font-bold">Amazon Prime Membership Review (2026)</a> to see if a Prime subscription is worth it in India.</span>
+    </li>
+    <li class="flex items-start gap-2.5 text-sm text-on-surface-variant font-sans" style="margin-bottom: 0;">
+      <span class="material-symbols-outlined text-primary text-[16px] mt-0.5">arrow_right</span>
+      <span>Looking for the perfect companion to test your new earbuds? Check out our <a href="/posts/audible-membership-review" class="text-primary hover:underline font-bold">Audible Membership Review (2026)</a>.</span>
+    </li>
+  </ul>
+</div>
 
 
 ## Final Verdict
