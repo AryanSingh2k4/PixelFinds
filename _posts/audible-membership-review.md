@@ -1,7 +1,7 @@
 ---
 title: "Audible Membership Review (2026): Is Audible Worth It in India?"
 excerpt: "Thinking about an Audible Membership in 2026? Read our complete, data-backed Audible review covering pricing, plans, catalog selection, and affiliate secrets."
-date: "2026-05-31T13:00:00.000Z"
+date: "2026-06-01T13:00:00.000Z"
 coverImage: "/assets/blog/audible-membership-review-2026.webp"
 ogImage:
   url: "/assets/blog/audible-membership-review-2026.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Best Wireless Earbuds Under ₹2500 in 2026 – Top 5 TWS Earbuds Worth Buying"
 excerpt: "Finding the best wireless earbuds under ₹2500 in 2026 can be difficult. Here is our comprehensive, data-backed comparison of the top 5 budget TWS earbuds in India."
-date: "2026-05-31T13:00:00.000Z"
+date: "2026-06-01T13:00:00.000Z"
 coverImage: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&q=80&w=1200"
 ogImage:
   url: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&q=80&w=1200"

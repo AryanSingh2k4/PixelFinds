@@ -3,17 +3,17 @@
 import Link from "next/link";
 import { useState } from "react";
 
+const categories = [
+  { name: "Phones", href: "/category/phones" },
+  { name: "Gadgets", href: "/category/gadgets" },
+  { name: "Desk Setup", href: "/category/desk-setup" },
+  { name: "Productivity", href: "/category/productivity" },
+  { name: "Buying Guides", href: "/category/buying-guides" },
+  { name: "Quick Recommendations", href: "/category/quick-recommendations" },
+];
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const categories = [
-    { name: "Phones", href: "/category/phones" },
-    { name: "Gadgets", href: "/category/gadgets" },
-    { name: "Desk Setup", href: "/category/desk-setup" },
-    { name: "Productivity", href: "/category/productivity" },
-    { name: "Buying Guides", href: "/category/buying-guides" },
-    { name: "Quick Recommendations", href: "/category/quick-recommendations" },
-  ];
 
   return (
     <header className="bg-white border-b border-outline-variant/30 sticky top-0 z-50 shadow-sm transition-all duration-300">
@@ -52,9 +52,12 @@ export function Header() {
             <span className="material-symbols-outlined">search</span>
           </button>
           
-          <button className="hidden sm:block bg-primary text-on-primary px-5 py-2 rounded-lg font-headline font-bold text-sm hover:opacity-90 active:scale-95 transition-all">
-            Newsletter
-          </button>
+          <Link 
+            href="/posts"
+            className="hidden sm:inline-flex bg-primary text-on-primary px-5 py-2 rounded-lg font-headline font-bold text-sm hover:opacity-90 active:scale-95 transition-all items-center justify-center"
+          >
+            All Posts
+          </Link>
 
           {/* Hamburger Menu Toggle Button (Mobile & Tablet) */}
           <button 
@@ -85,12 +88,13 @@ export function Header() {
               </Link>
             ))}
             <div className="p-4 border-t border-outline-variant/20 mt-2 flex flex-col gap-3">
-              <button 
+              <Link 
+                href="/posts"
                 onClick={() => setIsMenuOpen(false)}
-                className="w-full bg-primary text-on-primary py-3 rounded-xl font-headline font-bold text-sm text-center shadow-sm"
+                className="w-full bg-primary text-on-primary py-3 rounded-xl font-headline font-bold text-sm text-center shadow-sm inline-block"
               >
-                Subscribe to Newsletter
-              </button>
+                All Posts
+              </Link>
             </div>
           </nav>
         </div>

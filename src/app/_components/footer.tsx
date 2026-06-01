@@ -49,6 +49,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
           <div className="flex flex-col gap-4">
             <h4 className="font-bold text-on-surface font-headline">Links</h4>
+            <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/posts">All Posts</a>
             <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/about">About</a>
             <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/disclosure">Disclosure</a>
             <a className="text-on-surface-variant hover:text-secondary transition-colors" href="/privacy-policy">Privacy Policy</a>
