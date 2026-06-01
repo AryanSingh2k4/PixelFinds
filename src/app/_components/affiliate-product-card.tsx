@@ -82,10 +82,10 @@ export default function AffiliateProductCard({ product, index }: AffiliateProduc
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-4 border-t border-outline-variant/30 pt-4">
           <div className="flex flex-col">
             <span className="font-headline text-sm font-bold text-secondary">
-              Price Status
+              {product.price ? "Registration Cost" : "Price Status"}
             </span>
-            <span className="text-[11px] font-sans text-on-surface-variant">
-              Updated live on Amazon
+            <span className="text-[11px] font-sans text-on-surface-variant font-semibold">
+              {product.price || "Updated live on Amazon"}
             </span>
           </div>
           <a 
@@ -95,8 +95,12 @@ export default function AffiliateProductCard({ product, index }: AffiliateProduc
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-headline font-extrabold text-sm text-white bg-gradient-to-r from-[#FF9900] to-[#FF7A00] hover:from-[#FFAB24] hover:to-[#FF8F24] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 w-full sm:w-auto shadow-md hover:shadow-lg"
             style={{ animation: 'pulse-glow-orange 2s infinite ease-in-out' }}
           >
-            <span className="material-symbols-outlined text-[20px] font-bold text-white">shopping_cart</span>
-            <span className="text-white">Check Live Price on Amazon</span>
+            <span className="material-symbols-outlined text-[20px] font-bold text-white">
+              {product.price?.toLowerCase().includes("free") ? "assignment_ind" : "shopping_cart"}
+            </span>
+            <span className="text-white">
+              {product.price?.toLowerCase().includes("free") ? "Register for Free on Amazon" : "Check Live Price on Amazon"}
+            </span>
             <span className="material-symbols-outlined text-[18px] text-white">open_in_new</span>
           </a>
         </div>

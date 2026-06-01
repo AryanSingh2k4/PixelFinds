@@ -92,6 +92,17 @@
   margin-bottom: 0.5rem;
 }
 
+.prose a {
+  color: #3A57EA !important;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: all 0.2s ease;
+}
+
+.prose a:hover {
+  color: #7c3aed !important;
+}
+
 .prose blockquote {
   border-left: 4px solid #3A57EA;
   padding-left: 1rem;
