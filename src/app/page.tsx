@@ -1,6 +1,7 @@
 import Container from "@/app/_components/container";
 import { getAllPosts } from "@/lib/api";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Index() {
   const allPosts = getAllPosts();
@@ -17,10 +18,13 @@ export default function Index() {
       <section className="max-w-container-max mx-auto px-gutter pt-8 pb-12">
         {editorChoice ? (
           <div className="relative w-full h-[420px] sm:h-[480px] lg:h-auto lg:aspect-[21/9] rounded-2xl overflow-hidden group shadow-md">
-            <img 
+            <Image 
               alt={editorChoice.title} 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              className="object-cover transition-transform duration-700 group-hover:scale-105" 
               src={editorChoice.ogImage.url || editorChoice.coverImage} 
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6 md:p-12">
               <div className="max-w-3xl">
@@ -114,10 +118,12 @@ export default function Index() {
               {allPosts.map((post) => (
                 <div key={post.slug} className="flex-none w-72 bg-white rounded-2xl overflow-hidden shadow-soft border border-outline-variant/40 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
                   <div className="h-44 relative bg-slate-100">
-                    <img 
+                    <Image 
                       alt={post.title} 
-                      className="w-full h-full object-cover" 
+                      className="object-cover" 
                       src={post.coverImage} 
+                      fill
+                      sizes="288px"
                     />
                   </div>
                   <div className="p-stack-md flex flex-col justify-between h-44">
@@ -143,10 +149,12 @@ export default function Index() {
             <h2 className="font-headline text-3xl font-extrabold text-on-background mb-stack-lg">Explore Categories</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[500px]">
               <div className="md:col-span-2 md:row-span-2 relative group rounded-2xl overflow-hidden shadow-soft">
-                <img 
+                <Image 
                   alt="Gadgets" 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                  className="object-cover transition-transform duration-500 group-hover:scale-110" 
                   src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&q=80&w=600" 
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-black/45 flex flex-col justify-end p-stack-lg group-hover:bg-black/55 transition-all">
                   <h3 className="text-white font-headline text-2xl font-extrabold">Gadgets</h3>
@@ -158,10 +166,12 @@ export default function Index() {
               </div>
 
               <div className="md:col-span-2 relative group rounded-2xl overflow-hidden shadow-soft">
-                <img 
+                <Image 
                   alt="Study Setup" 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                  className="object-cover transition-transform duration-500 group-hover:scale-110" 
                   src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=400" 
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 group-hover:bg-black/50 transition-all">
                   <h3 className="text-white font-headline text-lg font-bold">Study Setup</h3>
@@ -172,10 +182,12 @@ export default function Index() {
               </div>
 
               <div className="relative group rounded-2xl overflow-hidden shadow-soft">
-                <img 
+                <Image 
                   alt="Productivity" 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                  className="object-cover transition-transform duration-500 group-hover:scale-110" 
                   src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=200" 
+                  fill
+                  sizes="(max-width: 768px) 100vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 group-hover:bg-black/50 transition-all">
                   <h3 className="text-white font-headline text-[15px] font-bold">Productivity</h3>
@@ -186,10 +198,12 @@ export default function Index() {
               </div>
 
               <div className="relative group rounded-2xl overflow-hidden shadow-soft">
-                <img 
+                <Image 
                   alt="Accessories" 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                  className="object-cover transition-transform duration-500 group-hover:scale-110" 
                   src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?auto=format&fit=crop&q=80&w=200" 
+                  fill
+                  sizes="(max-width: 768px) 100vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 group-hover:bg-black/50 transition-all">
                   <h3 className="text-white font-headline text-[15px] font-bold">Accessories</h3>
@@ -209,10 +223,12 @@ export default function Index() {
                 latestArticles.map((post) => (
                   <article key={post.slug} className="flex flex-col md:flex-row gap-6 group cursor-pointer border-b border-outline-variant/20 pb-stack-lg">
                     <div className="w-full md:w-64 h-44 rounded-xl overflow-hidden shrink-0 shadow-soft bg-surface-dim relative">
-                      <img 
+                      <Image 
                         alt={post.title} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                        className="object-cover group-hover:scale-105 transition-transform duration-500" 
                         src={post.coverImage} 
+                        fill
+                        sizes="(max-width: 768px) 100vw, 256px"
                       />
                     </div>
                     <div className="flex flex-col justify-center flex-1">
@@ -231,10 +247,12 @@ export default function Index() {
                         {post.excerpt}
                       </p>
                       <div className="flex items-center gap-2">
-                        <img 
+                        <Image 
                           src={post.author.picture} 
                           alt={post.author.name} 
-                          className="w-6 h-6 rounded-full object-cover" 
+                          className="rounded-full object-cover" 
+                          width={24}
+                          height={24}
                         />
                         <span className="text-[12px] font-headline font-semibold text-on-surface">By {post.author.name}</span>
                       </div>

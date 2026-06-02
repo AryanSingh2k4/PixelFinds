@@ -6,6 +6,7 @@ import Container from "@/app/_components/container";
 import AffiliateProductCard from "@/app/_components/affiliate-product-card";
 import ReadingProgressBar from "@/app/_components/reading-progress-bar";
 import Link from "next/link";
+import Image from "next/image";
 
 type PostParams = {
   params: Promise<{
@@ -150,10 +151,12 @@ export default async function Post(props: PostParams) {
               {post.title}
             </h1>
             <div className="flex items-center gap-4 py-4 border-t border-outline-variant/20">
-              <img 
+              <Image 
                 alt={post.author.name} 
-                className="w-12 h-12 rounded-full object-cover shadow-sm border border-outline-variant/30" 
+                className="rounded-full object-cover shadow-sm border border-outline-variant/30" 
                 src={post.author.picture} 
+                width={48}
+                height={48}
               />
               <div>
                 <p className="font-headline font-bold text-on-surface text-sm">By {post.author.name}</p>
