@@ -67,7 +67,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link
           rel="apple-touch-icon"
@@ -101,9 +101,35 @@ export default function RootLayout({
         <meta name="theme-color" content="#f8f9ff" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preload"
+          as="style"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+        />
         <link 
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" 
+          id="gfont-symbols"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" 
           rel="stylesheet"
+          media="print"
+          suppressHydrationWarning
+        />
+        <noscript>
+          <style dangerouslySetInnerHTML={{ __html: `.material-symbols-outlined { color: inherit !important; }` }} />
+        </noscript>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              var link = document.getElementById('gfont-symbols');
+              if (link) { link.media = 'all'; }
+              if ('fonts' in document) {
+                document.fonts.load('24px "Material Symbols Outlined"').then(function() {
+                  document.documentElement.classList.add('material-icons-loaded');
+                });
+              } else {
+                document.documentElement.classList.add('material-icons-loaded');
+              }
+            `
+          }}
         />
       </head>
       <body
