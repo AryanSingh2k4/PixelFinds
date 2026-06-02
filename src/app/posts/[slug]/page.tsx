@@ -177,7 +177,7 @@ export default async function Post(props: PostParams) {
 
           {/* Quick Recommendations Summary Card */}
           {post.quickPicks && post.quickPicks.length > 0 && (
-            <div id="quick-picks" className="bg-surface-container-low border border-primary-fixed-dim/50 rounded-2xl p-6 mb-8 shadow-soft">
+            <div id="quick-picks" className="bg-surface-container-low border border-primary-fixed-dim/50 rounded-2xl p-6 mb-8 shadow-soft scroll-mt-20">
               <div className="flex items-center gap-2 mb-4 text-primary">
                 <span className="material-symbols-outlined font-bold text-2xl">bolt</span>
                 <h3 className="font-headline text-lg font-bold">Quick Recommendations</h3>
@@ -243,7 +243,7 @@ export default async function Post(props: PostParams) {
                 Detailed Product Reviews
               </h2>
               {post.products.map((product, idx) => (
-                <div key={idx} id={`product-${idx + 1}`}>
+                 <div key={idx} id={`product-${idx + 1}`} className="scroll-mt-20">
                   <AffiliateProductCard product={product} index={idx + 1} />
                 </div>
               ))}
@@ -273,7 +273,7 @@ export default async function Post(props: PostParams) {
         </div>
 
         {/* Desktop Sticky Table of Contents Sidebar */}
-        <aside className="hidden lg:flex flex-col w-80 sticky top-24 h-fit gap-stack-md p-stack-md bg-surface-container-low rounded-2xl border border-outline-variant/30 shadow-soft">
+        <aside className="hidden lg:flex flex-col w-80 shrink-0 sticky top-24 h-fit gap-stack-md p-stack-md bg-surface-container-low rounded-2xl border border-outline-variant/30 shadow-soft">
           <div className="mb-2 px-1 border-b border-outline-variant/30 pb-3">
             <h3 className="font-headline text-lg font-bold text-primary">On This Page</h3>
             <p className="font-sans text-caption text-on-surface-variant">Quick Navigation</p>

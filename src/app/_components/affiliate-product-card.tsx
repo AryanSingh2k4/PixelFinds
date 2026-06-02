@@ -27,9 +27,9 @@ export default function AffiliateProductCard({ product, index }: AffiliateProduc
         <Image 
           src={product.image} 
           alt={product.title} 
-          className="object-contain mix-blend-multiply transition-transform duration-300 group-hover:scale-105"
-          fill
-          sizes="(max-width: 768px) 100vw, 33vw"
+          className="w-auto h-auto max-w-full max-h-[200px] md:max-h-[240px] object-contain mix-blend-multiply transition-transform duration-300 group-hover:scale-105"
+          width={400}
+          height={240}
         />
         <div className="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-full font-headline font-bold text-xs shadow-md">
           {product.rating} / 10

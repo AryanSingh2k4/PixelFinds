@@ -105,34 +105,38 @@ export default async function CategoryPage(props: CategoryParams) {
       <div className="flex flex-col lg:flex-row gap-stack-lg mt-8">
         
         {/* Sticky Desktop Guide Sidebar */}
-        <aside className="hidden lg:flex flex-col w-64 sticky top-24 h-fit gap-stack-md p-stack-md bg-surface-container-low rounded-xl border border-outline-variant/30 shadow-soft">
+        <aside className="hidden lg:flex flex-col w-64 shrink-0 sticky top-24 h-fit gap-stack-md p-stack-md bg-surface-container-low rounded-xl border border-outline-variant/30 shadow-soft">
           <div className="mb-2 px-1">
-            <h3 className="font-headline text-lg font-bold text-primary">Navigation</h3>
+            <h3 className="font-headline text-lg font-bold text-primary">Explore</h3>
             <p className="font-sans text-caption text-on-surface-variant">Category Index</p>
           </div>
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1.5">
             <Link className="flex items-center gap-2 text-primary font-bold border-l-4 border-primary pl-2.5 font-headline text-sm py-2 hover:bg-surface-container rounded-r" href="#">
-              <span className="material-symbols-outlined text-[20px]">list_alt</span>
-              Table of Contents
-            </Link>
-            <Link className="flex items-center gap-2 text-on-surface-variant pl-3.5 font-headline text-sm py-2 hover:bg-surface-container rounded" href="#deals">
-              <span className="material-symbols-outlined text-[20px]">local_offer</span>
-              Hot Deals Today
+              <span className="material-symbols-outlined text-[20px]">workspace_premium</span>
+              Featured Review
             </Link>
             <Link className="flex items-center gap-2 text-on-surface-variant pl-3.5 font-headline text-sm py-2 hover:bg-surface-container rounded" href="#feed">
               <span className="material-symbols-outlined text-[20px]">feed</span>
               Recent Reviews
             </Link>
+            <Link className="flex items-center gap-2 text-on-surface-variant pl-3.5 font-headline text-sm py-2 hover:bg-surface-container rounded" href="#deals">
+              <span className="material-symbols-outlined text-[20px]">local_offer</span>
+              Hot Deals Today
+            </Link>
           </div>
           <div className="mt-4 pt-4 border-t border-outline-variant/30">
-            <button className="w-full bg-primary-container text-on-primary-container py-3 rounded-xl font-headline font-bold text-xs hover:brightness-110 transition-all">
-              Check Latest Prices
-            </button>
+            <Link 
+              href="/" 
+              className="w-full bg-[#3A57EA] text-white py-3 rounded-xl font-headline font-bold text-xs flex items-center justify-center gap-2 hover:bg-[#2940B5] active:scale-95 transition-all text-center"
+            >
+              <span className="material-symbols-outlined text-[16px] text-white">home</span>
+              Back to Home
+            </Link>
           </div>
         </aside>
 
         {/* Dynamic Content Area */}
-        <div className="flex-1 space-y-section-gap">
+        <div className="flex-1 min-w-0 space-y-section-gap">
           
           {/* Featured Post Card */}
           {featuredPost && (
@@ -199,7 +203,7 @@ export default async function CategoryPage(props: CategoryParams) {
           </div>
 
           {/* Recent Reviews Grid */}
-          <section id="feed" className="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+          <section id="feed" className="grid grid-cols-1 md:grid-cols-2 gap-stack-lg scroll-mt-20">
             {listPosts.map((post) => (
               <Link key={post.slug} href={`/posts/${post.slug}`} className="group block cursor-pointer">
                 <div>
@@ -233,7 +237,7 @@ export default async function CategoryPage(props: CategoryParams) {
           </section>
 
           {/* Hot Deals Section */}
-          <section id="deals" className="bg-white rounded-2xl p-stack-lg shadow-soft border border-outline-variant/30">
+          <section id="deals" className="bg-white rounded-2xl p-stack-lg shadow-soft border border-outline-variant/30 scroll-mt-20">
             <div className="flex items-center gap-2 mb-stack-md">
               <span className="material-symbols-outlined text-secondary">local_offer</span>
               <h2 className="font-headline text-xl font-bold text-on-surface">Hot Gadget Deals Today</h2>
