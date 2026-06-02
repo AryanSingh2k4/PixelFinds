@@ -322,33 +322,21 @@ export default async function Post(props: PostParams) {
             )}
 
             {/* Buying Checklist Widget */}
-            <div className="p-5 bg-surface-container-low border border-outline-variant/30 rounded-2xl shadow-soft">
-              <h4 className="font-headline font-bold text-xs uppercase tracking-wider text-primary mb-3 flex items-center gap-1.5">
-                <span className="material-symbols-outlined text-[18px] text-primary">fact_check</span> Buying Checklist
-              </h4>
-              <ul className="flex flex-col gap-2">
-                <li className="flex items-center gap-2 text-[11px] font-sans text-on-surface-variant">
-                  <span className="material-symbols-outlined text-green-600 text-[16px] font-bold">check_circle</span>
-                  <span>Active Noise Cancellation (ANC)</span>
-                </li>
-                <li className="flex items-center gap-2 text-[11px] font-sans text-on-surface-variant">
-                  <span className="material-symbols-outlined text-green-600 text-[16px] font-bold">check_circle</span>
-                  <span>Battery Life & Charging Speed</span>
-                </li>
-                <li className="flex items-center gap-2 text-[11px] font-sans text-on-surface-variant">
-                  <span className="material-symbols-outlined text-green-600 text-[16px] font-bold">check_circle</span>
-                  <span>Low-Latency Gaming Mode</span>
-                </li>
-                <li className="flex items-center gap-2 text-[11px] font-sans text-on-surface-variant">
-                  <span className="material-symbols-outlined text-green-600 text-[16px] font-bold">check_circle</span>
-                  <span>Call Quality & Microphone Count</span>
-                </li>
-                <li className="flex items-center gap-2 text-[11px] font-sans text-on-surface-variant">
-                  <span className="material-symbols-outlined text-green-600 text-[16px] font-bold">check_circle</span>
-                  <span>Bluetooth Version & Codecs</span>
-                </li>
-              </ul>
-            </div>
+            {post.buyingChecklist && post.buyingChecklist.length > 0 && (
+              <div className="p-5 bg-surface-container-low border border-outline-variant/30 rounded-2xl shadow-soft">
+                <h4 className="font-headline font-bold text-xs uppercase tracking-wider text-primary mb-3 flex items-center gap-1.5">
+                  <span className="material-symbols-outlined text-[18px] text-primary">fact_check</span> Buying Checklist
+                </h4>
+                <ul className="flex flex-col gap-2">
+                  {post.buyingChecklist.map((item, idx) => (
+                    <li key={idx} className="flex items-center gap-2 text-[11px] font-sans text-on-surface-variant">
+                      <span className="material-symbols-outlined text-green-600 text-[16px] font-bold">check_circle</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </aside>
 

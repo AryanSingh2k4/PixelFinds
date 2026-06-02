@@ -182,6 +182,10 @@ Prime Music provides ad-free playback of over 100 million songs with full offlin
   <ul class="space-y-3 pl-0 list-none my-0" style="list-style-type: none; padding-left: 0;">
     <li class="flex items-start gap-2.5 text-sm text-on-surface-variant font-sans" style="margin-bottom: 0;">
       <span class="material-symbols-outlined text-primary text-[16px] mt-0.5">arrow_right</span>
+      <span>Choosing the ultimate flagship phone for your setup in 2026? Check out our comparison of the <a href="/posts/s26-ultra-vs-iphone-17-pro-max" class="text-primary hover:underline font-bold">Samsung Galaxy S26 Ultra vs iPhone 17 Pro Max</a>.</span>
+    </li>
+    <li class="flex items-start gap-2.5 text-sm text-on-surface-variant font-sans" style="margin-bottom: 0;">
+      <span class="material-symbols-outlined text-primary text-[16px] mt-0.5">arrow_right</span>
       <span>Looking to streamline tax invoicing and claim GST credits for your company? Read our complete <a href="/posts/amazon-business-account-registration-india" class="text-primary hover:underline font-bold">Amazon Business Account Registration Guide (2026)</a>.</span>
     </li>
     <li class="flex items-start gap-2.5 text-sm text-on-surface-variant font-sans" style="margin-bottom: 0;">

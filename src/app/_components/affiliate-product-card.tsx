@@ -88,21 +88,47 @@ export default function AffiliateProductCard({ product, index }: AffiliateProduc
               {product.price || "Updated live on Amazon"}
             </span>
           </div>
-          <a 
-            href={product.affiliateUrl} 
-            target="_blank" 
-            rel="nofollow noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-headline font-extrabold text-sm text-white bg-gradient-to-r from-[#FF9900] to-[#FF7A00] hover:from-[#FFAB24] hover:to-[#FF8F24] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 w-full sm:w-auto shadow-md hover:shadow-lg"
-            style={{ animation: 'pulse-glow-orange 2s infinite ease-in-out' }}
-          >
-            <span className="material-symbols-outlined text-[20px] font-bold text-white">
-              {product.price?.toLowerCase().includes("free") ? "assignment_ind" : "shopping_cart"}
-            </span>
-            <span className="text-white">
-              {product.price?.toLowerCase().includes("free") ? "Register for Free on Amazon" : "Check Live Price on Amazon"}
-            </span>
-            <span className="material-symbols-outlined text-[18px] text-white">open_in_new</span>
-          </a>
+          {product.amazonIndiaUrl && product.amazonUsaUrl ? (
+            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+              <a 
+                href={product.amazonIndiaUrl} 
+                target="_blank" 
+                rel="nofollow noopener noreferrer"
+                className="inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-xl font-headline font-extrabold text-xs text-white bg-gradient-to-r from-[#FF9900] to-[#FF7A00] hover:from-[#FFAB24] hover:to-[#FF8F24] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 shadow-md hover:shadow-lg w-full sm:w-auto"
+                style={{ animation: 'pulse-glow-orange 2s infinite ease-in-out' }}
+              >
+                <span className="material-symbols-outlined text-[18px] font-bold text-white">shopping_cart</span>
+                <span className="text-white">Amazon India</span>
+                <span className="material-symbols-outlined text-[16px] text-white">open_in_new</span>
+              </a>
+              <a 
+                href={product.amazonUsaUrl} 
+                target="_blank" 
+                rel="nofollow noopener noreferrer"
+                className="inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-xl font-headline font-extrabold text-xs text-white bg-gradient-to-r from-[#00A8E8] to-[#007EB9] hover:from-[#33BCF2] hover:to-[#2297CD] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 shadow-md hover:shadow-lg w-full sm:w-auto"
+              >
+                <span className="material-symbols-outlined text-[18px] font-bold text-white">shopping_cart</span>
+                <span className="text-white">Amazon USA</span>
+                <span className="material-symbols-outlined text-[16px] text-white">open_in_new</span>
+              </a>
+            </div>
+          ) : (
+            <a 
+              href={product.affiliateUrl} 
+              target="_blank" 
+              rel="nofollow noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-headline font-extrabold text-sm text-white bg-gradient-to-r from-[#FF9900] to-[#FF7A00] hover:from-[#FFAB24] hover:to-[#FF8F24] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 w-full sm:w-auto shadow-md hover:shadow-lg"
+              style={{ animation: 'pulse-glow-orange 2s infinite ease-in-out' }}
+            >
+              <span className="material-symbols-outlined text-[20px] font-bold text-white">
+                {product.price?.toLowerCase().includes("free") ? "assignment_ind" : "shopping_cart"}
+              </span>
+              <span className="text-white">
+                {product.price?.toLowerCase().includes("free") ? "Register for Free on Amazon" : "Check Live Price on Amazon"}
+              </span>
+              <span className="material-symbols-outlined text-[18px] text-white">open_in_new</span>
+            </a>
+          )}
         </div>
         <div className="mt-3 text-center sm:text-left">
           <p className="text-[10px] text-on-surface-variant/80 italic leading-none">

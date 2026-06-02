@@ -17,6 +17,12 @@ quickPicks:
   - type: "Best Sound"
     title: "CMF Buds 2a"
     url: "#product-4"
+buyingChecklist:
+  - "Active Noise Cancellation (ANC)"
+  - "Battery Life & Charging Speed"
+  - "Low-Latency Gaming Mode"
+  - "Call Quality & Microphone Count"
+  - "Bluetooth Version & Codecs"
 comparisonTable:
   features: ["Active Noise Cancellation", "Battery Life", "Driver Size", "Gaming Mode Latency"]
   products:
@@ -155,6 +161,10 @@ Bluetooth 5.4 provides improved stability, lower power consumption, and better d
     <span class="material-symbols-outlined text-[18px]">info</span> Related Business, Setup & Service Reviews
   </div>
   <ul class="space-y-3 pl-0 list-none my-0" style="list-style-type: none; padding-left: 0;">
+    <li class="flex items-start gap-2.5 text-sm text-on-surface-variant font-sans" style="margin-bottom: 0;">
+      <span class="material-symbols-outlined text-primary text-[16px] mt-0.5">arrow_right</span>
+      <span>Choosing the ultimate flagship phone for your setup in 2026? Check out our comparison of the <a href="/posts/s26-ultra-vs-iphone-17-pro-max" class="text-primary hover:underline font-bold">Samsung Galaxy S26 Ultra vs iPhone 17 Pro Max</a>.</span>
+    </li>
     <li class="flex items-start gap-2.5 text-sm text-on-surface-variant font-sans" style="margin-bottom: 0;">
       <span class="material-symbols-outlined text-primary text-[16px] mt-0.5">arrow_right</span>
       <span>Purchasing gear for a team or business? Claim up to 28% GST tax credits using our <a href="/posts/amazon-business-account-registration-india" class="text-primary hover:underline font-bold">Amazon Business Account Registration Guide (2026)</a>.</span>

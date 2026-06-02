@@ -4,6 +4,8 @@ export interface AffiliateProduct {
   title: string;
   image: string;
   affiliateUrl: string;
+  amazonIndiaUrl?: string;
+  amazonUsaUrl?: string;
   description: string;
   rating: string;
   pros: string[];
@@ -59,4 +61,5 @@ export type Post = {
   comparisonTable?: ComparisonTable;
   products?: AffiliateProduct[];
   faqs?: FAQItem[];
+  buyingChecklist?: string[];
 };

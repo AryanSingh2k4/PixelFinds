@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function Index() {
   const allPosts = getAllPosts();
 
-  // Find editor's choice post (specifically target earbuds review)
-  const editorChoice = allPosts.length > 0 ? (allPosts.find(p => p.slug === "best-wireless-earbuds-under-2500") || allPosts[0]) : null;
+  // Find editor's choice post (specifically target smartphone comparison review)
+  const editorChoice = allPosts.length > 0 ? (allPosts.find(p => p.slug === "s26-ultra-vs-iphone-17-pro-max") || allPosts[0]) : null;
 
   // Latest articles (excluding the main featured hero if possible, or listing all)
   const latestArticles = allPosts.length > 0 ? allPosts.slice(0, 5) : [];
