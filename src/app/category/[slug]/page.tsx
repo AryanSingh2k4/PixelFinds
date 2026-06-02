@@ -66,6 +66,21 @@ const CATEGORY_MAP: Record<string, { title: string; desc: string; image: string 
     desc: "Premium home workspace design. Get inspired by minimalist aesthetics, custom lighting, cable organization setups, and wood/felt desktop enhancements.",
     image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=600",
   },
+  phones: {
+    title: "Phones",
+    desc: "In-depth flagship smartphone reviews, head-to-head camera comparisons, performance analyses, and buying guides covering the best Android and iOS devices.",
+    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=600",
+  },
+  "buying-guides": {
+    title: "Buying Guides",
+    desc: "Handpicked product recommendations, critical checklists, and detailed research reports to help you purchase the best hardware and workspace accessories.",
+    image: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?auto=format&fit=crop&q=80&w=600",
+  },
+  "quick-recommendations": {
+    title: "Quick Recommendations",
+    desc: "High-impact gadget roundups, setup checklists, and fast specifications summaries to elevate your tech setup instantly.",
+    image: "https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&q=80&w=600",
+  },
 };
 
 export default async function CategoryPage(props: CategoryParams) {
@@ -328,5 +343,8 @@ export async function generateStaticParams() {
     { slug: "mobile-accessories" },
     { slug: "amazon-finds" },
     { slug: "desk-setup" },
+    { slug: "phones" },
+    { slug: "buying-guides" },
+    { slug: "quick-recommendations" },
   ];
 }
