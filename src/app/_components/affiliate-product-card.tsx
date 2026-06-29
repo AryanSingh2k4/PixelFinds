@@ -11,7 +11,7 @@ export default function AffiliateProductCard({ product, index }: AffiliateProduc
 
   return (
     <div 
-      className={`bg-white border rounded-[1.5rem] overflow-hidden shadow-soft flex flex-col md:flex-row transition-all duration-300 hover:shadow-md hover:-translate-y-1 relative ${
+      className={`bg-white border rounded-[1.5rem] overflow-hidden shadow-soft flex flex-col md:flex-row transition-all duration-300 hover:shadow-[0_20px_40px_-15px_rgba(58,87,234,0.15)] dark:hover:shadow-[0_20px_40px_-15px_rgba(96,165,250,0.1)] hover:border-primary/40 hover:-translate-y-1.5 relative group ${
         isBest ? "border-2 border-primary" : "border-outline-variant"
       }`}
     >

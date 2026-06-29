@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import ThemeToggle from "./theme-toggle";
 
 const categories = [
   { name: "Phones", href: "/category/phones" },
@@ -51,6 +52,7 @@ export function Header() {
           <button className="p-2 text-on-surface-variant hover:text-primary transition-all flex items-center justify-center rounded-full hover:bg-surface-container" aria-label="Search">
             <span className="material-symbols-outlined">search</span>
           </button>
+          <ThemeToggle />
           
           <Link 
             href="/posts"
