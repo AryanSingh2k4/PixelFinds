@@ -1,7 +1,7 @@
 ---
 title: "Samsung Galaxy S26 Ultra vs iPhone 17 Pro Max (2026): Which Flagship Should You Buy?"
 excerpt: "Comparing the Samsung Galaxy S26 Ultra and Apple iPhone 17 Pro Max in 2026. Discover differences in cameras, battery life, display, performance, AI features, software, and overall value."
-date: "2026-06-02T12:00:00.000Z"
+date: "2026-06-29T12:00:00.000Z"
 coverImage: "/images/blog/s26-ultra-vs-iphone-17-pro-max.webp"
 ogImage:
   url: "/images/blog/s26-ultra-vs-iphone-17-pro-max.webp"

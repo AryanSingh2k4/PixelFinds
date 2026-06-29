@@ -1,7 +1,7 @@
 ---
 title: "Amazon Business Account Registration in India (2026): Benefits, Features & How to Sign Up"
 excerpt: "Learn how to register an Amazon Business account in India, explore key benefits, GST invoicing, bulk purchasing, business-only pricing, and whether Amazon Business is worth it for startups, freelancers, and growing companies."
-date: "2026-06-01T10:00:00.000Z"
+date: "2026-06-28T10:00:00.000Z"
 coverImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200"
 ogImage:
   url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200"
